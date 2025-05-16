@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "net-ninja-app",
-    "slug": "net-ninja-app",
+    "scheme": "shelfieapp",
+    "name": "shelfie-app",
+    "slug": "shelfie-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,6 +25,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": ["expo-router"]
   }
 }
