@@ -7,7 +7,7 @@ const ThemedCard = ({ style, ...props }) => {
 
   return (
     <View
-      style={({ backgroundColor: theme.uiBackground }, css.card, style)}
+      style={({ backgroundColor: theme.uiBackground }, styles.card, style)}
       {...props}
     />
   );
@@ -15,7 +15,7 @@ const ThemedCard = ({ style, ...props }) => {
 
 export default ThemedCard;
 
-const css = StyleSheet.create({
+const styles = StyleSheet.create({
   card: {
     borderRadius: 5,
     padding: 20,
