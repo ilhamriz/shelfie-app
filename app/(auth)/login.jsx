@@ -24,6 +24,9 @@ const Login = () => {
           Register instead
         </ThemedText>
       </Link>
+      <Link href="/" style={{ marginTop: 40 }}>
+        <ThemedText style={{ textAlign: "center" }}>Back Home</ThemedText>
+      </Link>
     </ThemedView>
   );
 };

@@ -8,9 +8,7 @@ const Profile = () => {
       <ThemedText title style={styles.heading}>
         Your Email
       </ThemedText>
-      <ThemedText style={{ marginBottom: 40 }}>
-        Time to start reading some books...
-      </ThemedText>
+      <ThemedText>Time to start reading some books...</ThemedText>
     </ThemedView>
   );
 };
@@ -20,6 +18,7 @@ export default Profile;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    rowGap: 40,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -27,6 +26,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 18,
     textAlign: "center",
-    marginBottom: 40,
   },
 });
