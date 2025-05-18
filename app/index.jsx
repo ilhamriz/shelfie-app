@@ -12,18 +12,21 @@ const Home = () => {
       <ThemedText title style={styles.title}>
         The Number 1
       </ThemedText>
+
       <ThemedText style={{ marginTop: 10, marginBottom: 30 }}>
         Reading List App
       </ThemedText>
 
       <Link href="/login" style={styles.link}>
-        <ThemedText>Login Page</ThemedText>
+        <ThemedText>Login</ThemedText>
       </Link>
+
       <Link href="/register" style={styles.link}>
-        <ThemedText>Register Page</ThemedText>
+        <ThemedText>Register</ThemedText>
       </Link>
+
       <Link href="/profile" style={styles.link}>
-        <ThemedText>Profile Page</ThemedText>
+        <ThemedText>Profile</ThemedText>
       </Link>
     </ThemedView>
   );
