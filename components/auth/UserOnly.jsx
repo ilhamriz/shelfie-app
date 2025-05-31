@@ -1,7 +1,7 @@
-import { Text } from "react-native";
 import { useUser } from "../../hooks/useUser";
 import { useRouter } from "expo-router";
 import { useEffect } from "react";
+import ThemedLoader from "../ThemedLoader";
 
 const UserOnly = ({ children }) => {
   const { user, authChecked } = useUser();
@@ -13,7 +13,7 @@ const UserOnly = ({ children }) => {
     }
   }, [user, authChecked]);
 
-  return authChecked || user ? children : <Text>Loading</Text>;
+  return authChecked || user ? children : <ThemedLoader />;
 };
 
 export default UserOnly;
