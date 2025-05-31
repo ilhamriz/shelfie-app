@@ -5,7 +5,7 @@ import { ID } from "react-native-appwrite";
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState(null);
 
   async function login(email, password) {
     try {
@@ -16,6 +16,7 @@ export const UserProvider = ({ children }) => {
       throw Error(error.message);
     }
   }
+
   async function register(email, password) {
     try {
       await account.create(ID.unique(), email, password);
@@ -24,7 +25,11 @@ export const UserProvider = ({ children }) => {
       throw Error(error.message);
     }
   }
-  async function logout() {}
+
+  async function logout() {
+    await account.deleteSession("current");
+    setUser(null);
+  }
 
   const contextValue = useMemo(
     () => ({

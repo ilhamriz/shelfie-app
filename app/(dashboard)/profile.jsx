@@ -1,14 +1,22 @@
 import { StyleSheet } from "react-native";
 import ThemedView from "../../components/ThemedView";
 import ThemedText from "../../components/ThemedText";
+import { useUser } from "../../hooks/useUser";
+import ThemedButton from "../../components/ThemedButton";
 
 const Profile = () => {
+  const { logout } = useUser();
+
   return (
     <ThemedView style={styles.container}>
       <ThemedText title style={styles.heading}>
         Your Email
       </ThemedText>
       <ThemedText>Time to start reading some books...</ThemedText>
+
+      <ThemedButton onPress={logout}>
+        <Text style={{ colors: "#f2f2f2" }}>Logout</Text>
+      </ThemedButton>
     </ThemedView>
   );
 };
